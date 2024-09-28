@@ -1,0 +1,316 @@
+/* Base Styles */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #181818; /* Darker background color */
+    margin: 0;
+    padding: 20px;
+    color: #e0e0e0; /* Light text color */
+}
+
+/* Container */
+.container {
+    max-width: 800px;
+    margin: auto;
+    background: #242424; /* Dark background for container */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Typography */
+h1 {
+    text-align: center;
+    font-size: 2.5em;
+    color: #4dd0e1; /* Light cyan color */
+    margin-bottom: 20px;
+    text-transform: uppercase; /* Make the title more striking */
+    letter-spacing: 1px; /* Space out letters slightly */
+}
+
+h2 {
+    font-size: 2em;
+    margin-top: 20px;
+    color: #ffffff; /* White color */
+}
+
+h3 {
+    font-size: 1.5em;
+    color: #cccccc; /* Light gray */
+}
+
+/* Post Form Styles */
+.post-form {
+    margin-bottom: 20px;
+}
+
+textarea {
+    width: 100%;
+    height: 100px;
+    margin-bottom: 10px;
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid #444; /* Darker border */
+    background-color: #333; /* Dark background for textarea */
+    color: #e0e0e0; /* Light text */
+    font-size: 1em;
+    transition: border-color 0.3s, box-shadow 0.3s; /* Transition effect for focus */
+}
+
+textarea:focus {
+    border-color: #4dd0e1; /* Highlight border on focus */
+    box-shadow: 0 0 5px rgba(77, 208, 225, 0.5); /* Add a glow effect */
+}
+
+/* Button Styles */
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4dd0e1; /* Light cyan button */
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s; /* Added transform */
+}
+
+button:hover {
+    background-color: #39b1c4; /* Darker cyan on hover */
+    transform: scale(1.05); /* Slight scale effect on hover */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Add shadow on hover */
+}
+
+button:active {
+    transform: scale(0.95); /* Press effect */
+}
+
+/* Post Styles */
+.post {
+    background: #333; /* Dark background for posts */
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    font-size: 1.1em;
+    position: relative; /* For positioning elements */
+    transition: transform 0.2s, box-shadow 0.2s; /* Smooth transition for hover */
+}
+
+.post:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4); /* Deeper shadow on hover */
+}
+
+/* Like and Comment Styles */
+.like-button,
+.comment-button {
+    margin-right: 10px;
+    padding: 8px 15px; /* Button padding */
+    border: none;
+    border-radius: 5px;
+    font-size: 0.9em;
+    transition: background-color 0.3s, transform 0.2s; /* Transition effects */
+}
+
+.like-button {
+    background: #28a745; /* Green for like button */
+    color: white;
+}
+
+.like-button:hover {
+    background-color: #218838; /* Darker green on hover */
+}
+
+.comment-button {
+    background: #4dd0e1; /* Light cyan for comment button */
+    color: white;
+}
+
+.comment-button:hover {
+    background-color: #39b1c4; /* Darker cyan on hover */
+}
+
+/* Comment Section Styles */
+.comment-section {
+    margin-top: 10px;
+    display: none;
+}
+
+.comment-section textarea {
+    width: calc(100% - 20px);
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #444; /* Darker background for comment textarea */
+    color: #e0e0e0; /* Light text */
+}
+
+/* Comment Styles */
+.comment {
+    background: #444; /* Dark comment background */
+    padding: 10px;
+    border-radius: 5px;
+    margin: 5px 0;
+    border: 1px solid #555; /* Darker border */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    .post {
+        font-size: 1em;
+    }
+
+    button {
+        width: 100%; /* Full width buttons on small screens */
+        margin: 5px 0; /* Margin for spacing */
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.post {
+    animation: fadeIn 0.5s ease; /* Fade-in effect for posts */
+}
+
+/* Card Effects */
+.card {
+    background: #333; /* Dark background */
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+/* Gradient Background for Buttons */
+.button-gradient {
+    background: linear-gradient(45deg, #007bff, #00c6ff);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: all 0.3s ease;
+}
+
+.button-gradient:hover {
+    transform: scale(1.05);
+}
+
+/* Notification Badges */
+.notification-badge {
+    background: #dc3545; /* Red for notifications */
+    color: white;
+    border-radius: 50%;
+    padding: 5px 10px;
+    font-size: 0.8em;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+/* Placeholder Styles */
+::placeholder {
+    color: #aaa; /* Placeholder color */
+    opacity: 1; /* Firefox */
+}
+
+/* Scrollbar Styles */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #444; /* Dark track */
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888; /* Scrollbar color */
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Darker scrollbar on hover */
+}
+
+/* Focused Inputs */
+input:focus,
+textarea:focus {
+    border-color: #4dd0e1; /* Highlight border on focus */
+    box-shadow: 0 0 5px rgba(77, 208, 225, 0.5);
+}
+
+/* Miscellaneous Styles */
+.margin-bottom {
+    margin-bottom: 20px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+/* Media Query Adjustments */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 1.8em;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    .post {
+        padding: 15px;
+        margin-bottom: 10px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .container {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 2.2em;
+    }
+}
+
+/* End of Styles */
